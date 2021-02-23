@@ -1,0 +1,43 @@
+{
+	"name": "wp-redirects-parser",
+	"version": "1.0.0",
+	"description": "Accepts a JSON file exported from the WP Redirects plugin & outputs a txt file formatted for WP Engine",
+	"scripts": {
+		"build": "esbuild src/index.ts --bundle --outdir=out --platform=node --target=node12.16.2",
+		"lint": "eslint --ignore-path .gitignore --ext .js,.ts .",
+		"check-types": "tsc",
+		"prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json)\"",
+		"format": "npm run prettier -- --write",
+		"check-format": "npm run prettier -- --list-different",
+		"validate": "npm-run-all --parallel check-types check-format lint build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/acrobertson/wp-redirects-parser.git"
+	},
+	"keywords": [
+		"Wordpress",
+		"Redirects",
+		"WP",
+		"Engine"
+	],
+	"author": "Alec Robertson (https://github.com/acrobertson)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/acrobertson/wp-redirects-parser/issues"
+	},
+	"homepage": "https://github.com/acrobertson/wp-redirects-parser#readme",
+	"devDependencies": {
+		"@types/node": "^14.14.31",
+		"@typescript-eslint/eslint-plugin": "^4.15.2",
+		"@typescript-eslint/parser": "^4.15.2",
+		"eslint": "^7.20.0",
+		"eslint-config-prettier": "^8.0.0",
+		"npm-run-all": "^4.1.5",
+		"prettier": "2.2.1",
+		"typescript": "^4.1.5"
+	},
+	"dependencies": {
+		"esbuild": "^0.8.51"
+	}
+}
