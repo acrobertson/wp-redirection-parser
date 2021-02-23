@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "Accepts a JSON file exported from the WP Redirects plugin & outputs a txt file formatted for WP Engine",
 	"scripts": {
-		"build": "esbuild src/index.ts --bundle --outdir=out --platform=node --target=node12.16.2",
+		"build": "esbuild src/index.ts --bundle --outdir=build --platform=node --target=node12.16.2",
 		"lint": "eslint --ignore-path .gitignore --ext .js,.ts .",
 		"check-types": "tsc",
 		"prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json)\"",
@@ -28,6 +28,7 @@
 	},
 	"homepage": "https://github.com/acrobertson/wp-redirects-parser#readme",
 	"devDependencies": {
+		"@types/minimist": "^1.2.1",
 		"@types/node": "^14.14.31",
 		"@typescript-eslint/eslint-plugin": "^4.15.2",
 		"@typescript-eslint/parser": "^4.15.2",
@@ -38,6 +39,8 @@
 		"typescript": "^4.1.5"
 	},
 	"dependencies": {
-		"esbuild": "^0.8.51"
+		"chalk": "^4.1.0",
+		"esbuild": "^0.8.51",
+		"minimist": "^1.2.5"
 	}
 }
