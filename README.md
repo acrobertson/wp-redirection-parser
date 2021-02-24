@@ -4,19 +4,21 @@ A node CLI tool for the very particular use case of needing to transform redirec
 
 ## Usage
 
-Install and build the package:
+### Install and build the package:
 
 ```zsh
 npm install
 npm run build
 ```
 
-Run the script from the `build` directory. The script requires two arguments:
+### Run it
+
+Use node to run the tool from the `build` directory. It requires two arguments:
 
 - `redirectsFile`: filepath to the JSON file exported from the Redirection plugin
 - `baseUrl`: the base URL of your site to be used in the rewrite rules
 
-### Example
+## Example
 
 ```zsh
 node build --redirectsFile="/Users/yourname/Desktop/redirects.json" --baseUrl="https://example.com"
