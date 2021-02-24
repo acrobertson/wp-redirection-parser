@@ -37,13 +37,16 @@ async function main() {
 				  }`
 				: `Redirect ${redirect.action_code} ^${
 						redirect.url + (redirect.url.slice(-1) === '/' ? '?$' : '/?$')
-				  } ${baseUrl + redirect.match_url}`
+				  } ${baseUrl + redirect.action_data.url}`
 		)
 
 		// write transformed redirects to output file
 		for (const redirect of redirectsRewritten) {
 			writeStream.write((await redirect) + '\n')
+			console.log(await redirect)
 		}
+
+		console.log(chalk.green('Saved rewritten redirects to out/redirects.txt'))
 	} catch (err) {
 		console.log(chalk.red(`Error: ${err.message}`))
 	}
