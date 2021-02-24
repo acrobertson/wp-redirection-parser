@@ -1,5 +1,5 @@
 {
-	"name": "wp-redirects-parser",
+	"name": "wp-redirection-parser",
 	"version": "1.0.0",
 	"description": "Accepts a JSON file exported from the WP Redirects plugin & outputs a txt file formatted for WP Engine",
 	"scripts": {
@@ -17,9 +17,12 @@
 	},
 	"keywords": [
 		"Wordpress",
-		"Redirects",
-		"WP",
-		"Engine"
+		"Redirection",
+		"WP Engine",
+		"node",
+		"nodejs",
+		"esbuild",
+		"typescript"
 	],
 	"author": "Alec Robertson (https://github.com/acrobertson)",
 	"license": "MIT",
